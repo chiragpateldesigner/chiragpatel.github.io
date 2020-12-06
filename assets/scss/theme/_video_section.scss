@@ -1,0 +1,42 @@
+.video-section{
+
+	height: 4000px;
+	position: relative;
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top:0;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		background-color: $gray-color;
+		opacity:0.5;
+	}
+	
+	.caption{
+		position: fixed;
+		top: 50%;
+		max-width: 600px;
+		
+		&__title{
+			font-size: 2.3rem;
+		}
+	}
+	
+	video{
+		width:100%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		object-fit: cover;
+		z-index: -1;
+	
+		&.fixed {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+	}
+}

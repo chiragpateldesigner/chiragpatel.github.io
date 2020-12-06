@@ -1,0 +1,86 @@
+/* =================================== */
+/*  Basic Style 
+/* =================================== */
+
+body {
+	color: $gray-color;
+	font-family: $text-font;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.667;
+	margin:0;
+	padding:0
+}
+
+/* =================================== */
+/*  Typography 
+/* =================================== */
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover{
+  text-decoration: none;
+  color: $primary-color;	
+}
+
+button{
+  cursor: pointer;
+
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $title-font;
+	color: $gray-color;
+	line-height: 1.1;
+}
+.bg-gray *{
+	color : $white;
+}
+.bg-white *{
+	color : $gray-color;
+}
+img{
+	max-width:100%;
+}
+.page-title {
+	font-size: 2.625rem;
+}
+.btn-primary {
+	background-color: $primary-color;
+	border-radius: 0;
+	border-color: $primary-color;
+	color: $white;
+}
+.btn-primary:hover {
+	background-color: transparent;
+	color: $primary-color;
+	border-color: $primary-color;
+}
+.bg-white {
+	background-color: $white;
+}
+.bg-gray {
+	background-color: $gray-color;
+}
+.text-gold{
+	color: $primary-color;
+}
+.text-white {
+	color: $white;
+}
+.page-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}

@@ -1,0 +1,318 @@
+/*=================== font family ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+/*=================== color variations ====================*/
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+/* =================================== */
+/*  Basic Style 
+/* =================================== */
+body {
+  color: #333333;
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.667;
+  margin: 0;
+  padding: 0;
+}
+
+/* =================================== */
+/*  Typography 
+/* =================================== */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e0bc75;
+}
+
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: #333333;
+  line-height: 1.1;
+}
+
+.bg-gray * {
+  color: #fff;
+}
+
+.bg-white * {
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-title {
+  font-size: 2.625rem;
+}
+
+.btn-primary {
+  background-color: #e0bc75;
+  border-radius: 0;
+  border-color: #e0bc75;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #e0bc75;
+  border-color: #e0bc75;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #333333;
+}
+
+.text-gold {
+  color: #e0bc75;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.page-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: height 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+header.sticky::before {
+  height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+header.sticky .navbar-light .navbar-nav .nav-link {
+  color: #333333;
+}
+
+li.nav-item {
+  position: relative;
+}
+
+li.nav-item::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #e0bc75;
+  width: 0;
+  transition: width 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  bottom: 0;
+}
+
+li.nav-item:hover::after {
+  width: 100%;
+}
+
+.video-section {
+  height: 4000px;
+  position: relative;
+}
+.video-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #333333;
+  opacity: 0.5;
+}
+.video-section .caption {
+  position: fixed;
+  top: 50%;
+  max-width: 600px;
+}
+.video-section .caption__title {
+  font-size: 2.3rem;
+}
+.video-section video {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+.video-section video.fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.block-testimonial {
+  border-left: 3px solid #e0bc75;
+  padding-left: 20px;
+  margin-top: 25px;
+}
+
+.img-style1 {
+  position: relative;
+  padding: 40px 20px;
+}
+.img-style1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.img-style1::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 45px;
+  border: 3px solid #e0bc75;
+  z-index: 2;
+  top: 0;
+  border-right: 0;
+}
+.img-style1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: calc(50% - 100px);
+  height: 100%;
+  border: 3px solid #e0bc75;
+  border-left: 0;
+  z-index: 0;
+}
+.img-style1__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  min-width: 182px;
+  min-height: 182px;
+  transform: translateY(calc(-50% + 30px));
+  -webkit-transform: translateY(calc(-50% + 30px));
+}
+.img-style1__per {
+  font-size: 2rem;
+}
+.img-style1__type {
+  text-transform: uppercase;
+}
+
+.flex-lg-row-reverse .img-style1::before {
+  width: calc(50% - 100px);
+  left: 100px;
+  right: auto;
+  border-right: 0;
+  z-index: 0;
+}
+.flex-lg-row-reverse .img-style1::after {
+  right: 45px;
+  left: auto;
+  width: 50%;
+  border-left: 0;
+  z-index: 2;
+}
+.flex-lg-row-reverse .img-style1__info {
+  right: 0;
+  left: auto;
+}
+
+.achievement {
+  background-image: url("../images/skyscraper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.achievement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #333333;
+  opacity: 0.9;
+}
+.achievement span.counter {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.call-to-action {
+  background-image: url("../images/skyscraper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.call-to-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #333333;
+  opacity: 0.9;
+}
+.call-to-action__title {
+  font-size: 2rem;
+}
+
+.block-title {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+.featured-articles h3 {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.featured-articles img {
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
